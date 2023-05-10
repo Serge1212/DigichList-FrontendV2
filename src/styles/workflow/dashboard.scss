@@ -1,0 +1,50 @@
+.chart-container {
+  height: 500px !important;
+  width: 100%;
+  font-size: 12.5px;
+}
+.request-table {
+  border-radius: 4px;
+  border: 1px solid rgba(224, 224, 224, 1);
+  .MuiTableRow-root {
+    font-size: 14px;
+    .MuiTableCell-root {
+      font-size: 12.5px;
+      text-align: unset;
+      span {
+        font-size: 12.5px;
+      }
+      div {
+        display: block;
+        justify-content: unset;
+        div {
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.MuiDataGridMenu-root {
+  .MuiListItem-root {
+    font-size: 13px;
+  }
+}
+.MuiMenu-paper {
+  .MuiMenuItem-root {
+    font-size: 13px;
+  }
+}
+.MuiAutocomplete-popper {
+  .MuiAutocomplete-option, .MuiAutocomplete-noOptions {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .chart-container {
+    height: 300px !important;
+  }
+}

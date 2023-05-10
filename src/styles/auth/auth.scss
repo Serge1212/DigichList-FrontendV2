@@ -1,0 +1,26 @@
+
+$main-blue: #0d6efd;
+$hover-blue: #024FBF;
+
+body{
+    // background-color: #FDFBFD  !important;
+    background: linear-gradient(144deg, #F3F3FB 0%, #FDFBFD 100%) !important;
+    // linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
+    font: {
+        size: 14px;
+    } 
+}
+.root{
+    &:hover{
+        background: transparent;
+    }
+}
+.MuiFormControlLabel-label{
+    user-select: none;
+    font-size: 14px;
+    &.MuiTypography-body1{
+        font-size: 14px;
+    }
+}
+
+
