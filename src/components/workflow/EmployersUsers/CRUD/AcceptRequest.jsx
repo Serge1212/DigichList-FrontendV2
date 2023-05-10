@@ -30,7 +30,7 @@ class AcceptRequest extends React.Component {
     }
     async componentDidMount() {
         this._isMounted = true;
-        await fetch('https://digichlistbackend.herokuapp.com/api/roles', {
+        await fetch('https://localhost:44379/api/roles', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ class AcceptRequest extends React.Component {
             this.setState({ showErrorMessage: true })
         }
         else {
-            await fetch(`https://digichlistbackend.herokuapp.com/api/roles/AssignRole?userId=${this.state.userId}&roleId=${this.state.idSelectedRole}`,
+            await fetch(`https://localhost:44379/api/roles/AssignRole?userId=${this.state.userId}&roleId=${this.state.idSelectedRole}`,
                 {
                     method: 'POST',
                     headers: {

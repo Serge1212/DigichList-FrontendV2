@@ -15,7 +15,7 @@ const DeleteForm = (props) => {
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		await fetch(
-			`https://digichlistbackend.herokuapp.com/DeleteUsers${DeleteString(
+			`https://localhost:44379/DeleteUsers${DeleteString(
 				props.data
 			)}`,
 			{

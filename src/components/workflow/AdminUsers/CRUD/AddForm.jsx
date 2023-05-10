@@ -61,7 +61,7 @@ class AddAdmin extends React.Component {
 						.required('Please confirm your password'),
 				})}
 				onSubmit={async (values) => {
-					await fetch(`https://digichlistbackend.herokuapp.com/api/admin`, {
+					await fetch(`https://localhost:44379.com/api/admin`, {
 						method: 'POST',
 						headers: {
 							'Content-Type': 'application/json',

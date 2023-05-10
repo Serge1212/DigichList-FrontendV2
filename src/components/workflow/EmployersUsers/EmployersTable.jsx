@@ -108,7 +108,7 @@ class RenderCellGrid extends React.Component {
     componentDidMount() {
         this._isMounted = true;
         axios
-            .get(`https://digichlistbackend.herokuapp.com/api/users/GetRegisteredUsers`)
+            .get(`https://localhost:44379/api/users/getRegisteredUsers`)
             .then((res) => {
                 // console.log(res.data)
                 if (this._isMounted) {

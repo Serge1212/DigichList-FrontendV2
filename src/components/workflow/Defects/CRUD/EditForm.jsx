@@ -44,7 +44,7 @@ class EditForm extends React.Component {
 	async componentDidMount() {
 		this._isMounted = true;
 		await fetch(
-			'https://digichlistbackend.herokuapp.com/api/users/GetTechnicians',
+			'https://localhost:44379/api/users/GetTechnicians',
 			{
 				method: 'GET',
 				headers: {
@@ -106,20 +106,13 @@ class EditForm extends React.Component {
 						onSubmit={async (values) => {
 							values.assignedWorkerId = fixesDefect.id;
 							await fetch(
-								`https://digichlistbackend.herokuapp.com/api/defect/UpdateDefect`,
+								`https://localhost:44379/api/defect/assignDefect?userId=${values.assignedWorkerId}&defectId=${values.id}`,
 								{
 									method: 'POST',
 									headers: {
 										'Content-Type': 'application/json',
 										Accept: 'application/json',
 									},
-									body: JSON.stringify({
-										id: values.id,
-										description: values.description,
-										roomNumber: values.roomNumber,
-										defectStatus: values.defectStatus,
-										assignedWorkerId: values.assignedWorkerId,
-									}),
 								}
 							).then((response) =>
 								response.ok === true ? location.reload() : null

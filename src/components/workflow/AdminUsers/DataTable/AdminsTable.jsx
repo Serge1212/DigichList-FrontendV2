@@ -94,7 +94,7 @@ class AdminUsersTable extends React.Component {
 	componentDidMount() {
 		this._isMounted = true;
 		axios
-			.get(`https://digichlistbackend.herokuapp.com/api/admin`)
+			.get(`https://localhost:44379/api/admin`)
 			.then((res) => {
 				if (this._isMounted) {
 					const admins = res.data;

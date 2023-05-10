@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
     const login = async (email, password) => {
         try {
             var response = {}
-            await fetch('https://digichlistbackend.herokuapp.com/login', {
+            await fetch('https://localhost:44379/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const AuthProvider = ({ children }) => {
 
     const logout = async () => {
         var response = {}
-        await fetch('https://digichlistbackend.herokuapp.com/logout', {
+        await fetch('https://localhost:44379/logout', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        fetch('https://digichlistbackend.herokuapp.com/admin', {
+        fetch('https://localhost:44379/admin', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

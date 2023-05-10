@@ -25,7 +25,7 @@ class SetTechnician extends React.Component {
 	async componentDidMount() {
 		this._isMounted = true;
 		await fetch(
-			'https://digichlistbackend.herokuapp.com/api/users/GetTechnicians',
+			'https://localhost:44379/api/users/GetTechnicians',
 			{
 				method: 'GET',
 				headers: {
@@ -61,7 +61,7 @@ class SetTechnician extends React.Component {
 			this.props.setOpenState(false);
 		} else {
 			await fetch(
-				`https://digichlistbackend.herokuapp.com/api/defect?userId=${this.state.SelectedTechnician.id}&defectId=${this.state.defectId}`,
+				`https://localhost:44379/api/defect/assignDefect?userId=${this.state.SelectedTechnician.id}&defectId=${this.state.defectId}`,
 				{
 					method: 'POST',
 					headers: {

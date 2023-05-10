@@ -29,7 +29,7 @@ function RequestAction(props) {
 		e.preventDefault();
 		console.log(denyData);
 		await fetch(
-			`https://digichlistbackend.herokuapp.com/DeleteUsers${DeleteString(
+			`https://localhost:44379/DeleteUsers${DeleteString(
 				denyData
 			)}`,
 			{
@@ -120,7 +120,7 @@ class RequestTable extends React.Component {
 		this._isMounted = true;
 		axios
 			.get(
-				`https://digichlistbackend.herokuapp.com/api/users/GetUnregisteredUsers`
+				`https://localhost:44379/api/users/GetUnregisteredUsers`
 			)
 			.then((res) => {
 				if (this._isMounted) {

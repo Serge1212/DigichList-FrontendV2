@@ -211,7 +211,7 @@ class DefectsTable extends React.Component {
 	componentDidMount() {
 		this._isMounted = true;
 		axios
-			.get(`https://digichlistbackend.herokuapp.com/api/defect`)
+			.get(`https://localhost:44379/api/defect`)
 			.then((res) => {
 				if (this._isMounted) {
 					const defect = res.data;

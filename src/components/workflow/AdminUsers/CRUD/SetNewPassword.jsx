@@ -41,7 +41,7 @@ class SetNewPassword extends React.Component {
 				})}
 				onSubmit={async (values) => {
 					await fetch(
-						`https://digichlistbackend.herokuapp.com/api/admin/UpdateAdminPassword`,
+						`https://localhost:44379/api/admin/updateAdminPassword`,
 						{
 							method: 'POST',
 							headers: {

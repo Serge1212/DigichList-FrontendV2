@@ -30,7 +30,7 @@ class SetTechnician extends React.Component {
     }
     async componentDidMount() {
         this._isMounted = true;
-        await fetch('https://digichlistbackend.herokuapp.com/api/roles', {
+        await fetch('https://localhost:44379/api/roles', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ class SetTechnician extends React.Component {
     async handleSubmit(event) {
         event.preventDefault();
         if (this.state.idSelectedRole == 'null') {
-            await fetch(`https://digichlistbackend.herokuapp.com/api/roles/RemoveRoleFromUser?userId=${this.state.userId}`, {
+            await fetch(`https://localhost:44379/api/roles/RemoveRoleFromUser?userId=${this.state.userId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ class SetTechnician extends React.Component {
                 },
             }).then(response => response.ok === true ? location.reload() : null)
         } else {
-            await fetch(`https://digichlistbackend.herokuapp.com/api/roles/AssignRole?userId=${this.state.userId}&roleId=${this.state.idSelectedRole}`, {
+            await fetch(`https://localhost:44379/api/roles/AssignRole?userId=${this.state.userId}&roleId=${this.state.idSelectedRole}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
