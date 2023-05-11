@@ -30,6 +30,7 @@ class Dashboard extends React.Component {
 				const defect = res.data;
 				this.setState({ defectsData: defect });
 				this.setState({ loading: false });
+				console.log(this.state);
 			});
 	}
 	componentWillUnMount() {

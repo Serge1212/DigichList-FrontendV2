@@ -21,7 +21,7 @@ export default class RequestTable extends React.Component {
 				{ name: 'id', title: '#id' },
 				{ name: 'description', title: 'Description' },
 				{ name: 'roomNumber', title: 'Room Number' },
-				{ name: 'defectStatus', title: 'Status' },
+				{ name: 'status', title: 'Status' },
 				{ name: 'publisher', title: 'Publisher' },
 				{ name: 'createdAt', title: 'Created At' },
 			],
@@ -30,7 +30,7 @@ export default class RequestTable extends React.Component {
 				{ columnName: 'description', width: 340 },
 				{ columnName: 'roomNumber', width: 150 },
 				{ columnName: 'createdAt', width: 150 },
-				{ columnName: 'defectStatus', width: 100 },
+				{ columnName: 'status', width: 100 },
 				{ columnName: 'publisher', width: 200 },
 			],
 		};
@@ -53,7 +53,7 @@ export default class RequestTable extends React.Component {
 		return (
 			<div className='request-table'>
 				<Grid rows={this.state.rows} columns={this.state.columns}>
-					<GroupingState grouping={[{ columnName: 'defectStatus' }]} />
+					<GroupingState grouping={[{ columnName: 'status' }]} />
 					<IntegratedGrouping />
 					<VirtualTable height='325px' />
 					<TableColumnResizing

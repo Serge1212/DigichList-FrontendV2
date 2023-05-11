@@ -106,7 +106,7 @@ function RenderState(props) {
 		value: PropTypes.object,
 	};
 	const classes = FormStyleMake();
-	const paramValue = props.value.row.defectStatus;
+	const paramValue = props.value.row.status;
 
 
 	const renderSwitch = (params) => {
@@ -131,13 +131,13 @@ function RenderState(props) {
 						icon={<FiberManualRecordRoundedIcon />}
 					/>
 				);
-			case 'Solved':
+			case 'Eliminated':
 				return (
 					<Chip
 						className={classes.allowed}
 						variant='outlined'
 						size='small'
-						label='Solved'
+						label='Eliminated'
 						icon={<CheckCircleRoundedIcon />}
 					/>
 				);
@@ -158,11 +158,6 @@ function RenderState(props) {
 
 const columns = [
 	{
-		field: 'id',
-		headerName: '#id',
-		width: 100,
-	},
-	{
 		field: 'description',
 		headerName: 'Description',
 		width: 360,
@@ -179,13 +174,18 @@ const columns = [
 		width: 150,
 	},
 	{
+		field: 'assignee',
+		headerName: 'Assignee',
+		width: 150,
+	},
+	{
 		field: 'userThatFixesDefect',
 		headerName: 'Fixes defect',
 		width: 180,
 		renderCell: (params) => <RenderFixesDefect value={params} />,
 	},
 	{
-		field: 'defectStatus',
+		field: 'status',
 		headerName: 'Status',
 		width: 150,
 		renderCell: (params) => <RenderState value={params} />,
