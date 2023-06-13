@@ -95,10 +95,10 @@ class AcceptRequest extends React.Component {
                                 value={this.state.idSelectedRole}
                             >
                                 {this.state.menuItems.map((params, index) => {
-                                    const { roleName, id } = params;
+                                    const { name, id } = params;
                                     return (
                                         <MenuItem key={index} value={id}>
-                                            {roleName}
+                                            {name}
                                         </MenuItem>
                                     );
                                 })}
